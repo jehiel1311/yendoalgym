@@ -1,10 +1,35 @@
-<!-- simple redirect to static version -->
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta http-equiv="refresh" content="0; url=../static/index.html" />
-  </head>
-  <body>
-    Redirigiendo...
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscador de Ejercicios de Gym</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Buscador de Ejercicios de Gym</h1>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Buscar por nombre..." />
+
+      <select id="zonaSelect">
+        <option value="">Todas las Zonas</option>
+      </select>
+    </div>
+
+    <table id="ejerciciosTable">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Zona principal</th>
+          <th>Músculos secundarios</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>

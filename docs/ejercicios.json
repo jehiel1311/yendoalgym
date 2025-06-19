@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Press de Banca",
+    "zona": "Pectoral",
+    "musculos_secundarios": ["Tríceps", "Deltoides anterior"]
+  },
+  {
+    "nombre": "Sentadilla",
+    "zona": "Piernas",
+    "musculos_secundarios": ["Glúteos", "Espalda baja"]
+  },
+  {
+    "nombre": "Dominadas",
+    "zona": "Espalda",
+    "musculos_secundarios": ["Bíceps", "Antebrazo"]
+  },
+  {
+    "nombre": "Curl de Bíceps",
+    "zona": "Brazos",
+    "musculos_secundarios": ["Antebrazo"]
+  },
+  {
+    "nombre": "Plancha",
+    "zona": "Core",
+    "musculos_secundarios": ["Abdominales", "Espalda baja"]
+  }
+]
