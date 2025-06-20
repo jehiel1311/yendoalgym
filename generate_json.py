@@ -36,8 +36,8 @@ def main() -> None:
     # Normalizar nombres de columnas a minúsculas sin espacios
     df.columns = [c.strip().lower() for c in df.columns]
 
-    expected = {"nombre", "zona", "musculos_secundarios"}
-    missing = expected - set(df.columns)
+    expected_base = {"nombre", "zona", "musculos_secundarios"}
+    missing = expected_base - set(df.columns)
     if missing:
         raise ValueError(
             f"Columnas faltantes en el Excel: {', '.join(sorted(missing))}"
@@ -53,9 +53,13 @@ def main() -> None:
 
     df["musculos_secundarios"] = df["musculos_secundarios"].apply(to_list)
 
-    records = df[["nombre", "zona", "musculos_secundarios"]].to_dict(
-        orient="records"
-    )
+    # Mantener todas las columnas originales
+    records = df.to_dict(orient="records")
+
+    # Si existe columna 'id', generar ruta de imagen automática
+    for rec in records:
+        if 'id' in rec and pd.notna(rec['id']):
+            rec['imagen'] = f"img/{rec['id']}.png"
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT_PATH.open("w", encoding="utf-8") as fp:

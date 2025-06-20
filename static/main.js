@@ -27,7 +27,7 @@ function showError(message) {
 async function fetchEjercicios() {
   setLoading(true);
   try {
-    const res = await fetch('/ejercicios');
+    const res = await fetch('ejercicios.json');
     if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
     ejercicios = await res.json();
     if (ejercicios.length === 0) {
@@ -54,9 +54,27 @@ function poblarZonaSelect() {
   });
 }
 
+function createHeader(keys) {
+  const thead = document.querySelector('#ejerciciosTable thead');
+  thead.innerHTML = '';
+  const tr = document.createElement('tr');
+  keys.forEach(k => {
+    const th = document.createElement('th');
+    th.textContent = k.charAt(0).toUpperCase() + k.slice(1).replace('_', ' ');
+    tr.appendChild(th);
+  });
+  thead.appendChild(tr);
+}
+
 function renderTable() {
   const filtroNombre = searchInput.value.toLowerCase();
   const filtroZona = zonaSelect.value;
+
+  // Determinar columnas dinámicamente (solo en la primera llamada)
+  if (ejercicios.length && !document.querySelector('#ejerciciosTable thead').children.length) {
+    const cols = Object.keys(ejercicios[0]);
+    createHeader(cols);
+  }
 
   const filtered = ejercicios.filter(e => {
     const coincideNombre = e.nombre.toLowerCase().includes(filtroNombre);
@@ -68,18 +86,22 @@ function renderTable() {
   filtered.forEach(e => {
     const tr = document.createElement('tr');
 
-    const tdNombre = document.createElement('td');
-    tdNombre.textContent = e.nombre;
-
-    const tdZona = document.createElement('td');
-    tdZona.textContent = e.zona;
-
-    const tdSecundarios = document.createElement('td');
-    tdSecundarios.textContent = e.musculos_secundarios.join(', ');
-
-    tr.appendChild(tdNombre);
-    tr.appendChild(tdZona);
-    tr.appendChild(tdSecundarios);
+    Object.entries(e).forEach(([key, value]) => {
+      const td = document.createElement('td');
+      if (key === 'imagen') {
+        const img = document.createElement('img');
+        img.src = value;
+        img.alt = e.nombre;
+        img.width = 124;
+        img.height = 124;
+        td.appendChild(img);
+      } else if (Array.isArray(value)) {
+        td.textContent = value.join(', ');
+      } else {
+        td.textContent = value;
+      }
+      tr.appendChild(td);
+    });
 
     tbody.appendChild(tr);
   });
@@ -96,17 +118,19 @@ function handleSearch() {
 searchInput.addEventListener('input', handleSearch);
 zonaSelect.addEventListener('change', renderTable);
 
-// Recargar datos cada 5 minutos (opcional)
-setInterval(() => {
-  fetch('/reload')
-    .then(res => res.json())
-    .then(data => {
-      if (data.status === 'success') {
-        console.log(`Datos recargados: ${data.count} ejercicios`);
-      }
-    })
-    .catch(console.error);
-}, 5 * 60 * 1000);
+// Recarga automática solo cuando se ejecuta en localhost (Flask)
+if (location.hostname === '127.0.0.1' || location.hostname === 'localhost') {
+  setInterval(() => {
+    fetch('/reload')
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'success') {
+          console.log(`Datos recargados: ${data.count} ejercicios`);
+        }
+      })
+      .catch(() => {});
+  }, 5 * 60 * 1000);
+}
 
 // Helper para compatibilidad (IE no soportado pero por si acaso)
 function afterEvent(element, event, handler) {
