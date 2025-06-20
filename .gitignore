@@ -1,0 +1,10 @@
+# Ignorar archivos temporales de Excel
+data/~$*
+
+# Ignorar entorno virtual
+venv/
+.venv/
+
+# Ignorar módulos de Node (si llegaran a aparecer)
+node_modules/
+

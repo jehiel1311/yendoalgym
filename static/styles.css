@@ -48,3 +48,38 @@ h1 {
 #ejerciciosTable th {
   background-color: #f7f7f7;
 }
+
+/* Estados de carga y error */
+.loading,
+.error {
+  text-align: center;
+  padding: 20px !important;
+  color: #666;
+  font-style: italic;
+}
+
+.error {
+  color: #d32f2f;
+  background-color: #ffebee;
+}
+
+/* Transiciones suaves */
+.controls {
+  transition: opacity 0.3s ease;
+}
+
+/* Mejoras de accesibilidad */
+input:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+
+/* Mensaje cuando no hay resultados */
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}

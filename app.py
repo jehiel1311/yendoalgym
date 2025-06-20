@@ -1,14 +1,32 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, abort
 import json
 import os
+from pathlib import Path
 
 app = Flask(__name__, static_folder='static', static_url_path='')
 
-DATA_FILE = os.path.join(app.root_path, 'data', 'ejercicios.json')
+# Configuración
+DATA_FILE = Path(__file__).parent / 'static' / 'ejercicios.json'
+ALLOWED_FILES = {'index.html', 'main.js', 'styles.css'}
 
-# Cargar datos una sola vez al iniciar la app
-with open(DATA_FILE, 'r', encoding='utf-8') as f:
-    ejercicios = json.load(f)
+# Cargar datos al inicio
+try:
+    with open(DATA_FILE, 'r', encoding='utf-8') as f:
+        ejercicios = json.load(f)
+except FileNotFoundError:
+    print(f"Error: No se encontró el archivo {DATA_FILE}")
+    ejercicios = []
+    
+# Función para recargar los datos
+def reload_ejercicios():
+    global ejercicios
+    try:
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            ejercicios = json.load(f)
+        return True
+    except Exception as e:
+        print(f"Error al recargar ejercicios: {e}")
+        return False
 
 
 @app.route('/ejercicios')
@@ -25,10 +43,19 @@ def index():
     return send_from_directory(app.static_folder, 'index.html')
 
 
-@app.route('/<path:path>')
-def static_proxy(path):
-    """Sirve archivos estáticos como JS y CSS."""
-    return send_from_directory(app.static_folder, path)
+@app.route('/<path:filename>')
+def serve_static(filename):
+    """Sirve archivos estáticos permitidos."""
+    if filename not in ALLOWED_FILES and not filename.startswith('ejercicios.json'):
+        abort(403, description="Acceso denegado")
+    return send_from_directory(app.static_folder, filename)
+
+@app.route('/reload')
+def reload_data():
+    """Ruta para recargar los datos manualmente."""
+    if reload_ejercicios():
+        return jsonify({"status": "success", "count": len(ejercicios)})
+    return jsonify({"status": "error", "message": "Error al recargar datos"}), 500
 
 
 if __name__ == '__main__':

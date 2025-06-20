@@ -2,18 +2,45 @@
 const searchInput = document.getElementById('searchInput');
 const zonaSelect = document.getElementById('zonaSelect');
 const tbody = document.querySelector('#ejerciciosTable tbody');
+const controls = document.querySelector('.controls');
 
 let ejercicios = [];
+let isLoading = false;
+
+// Mostrar estado de carga
+function setLoading(state) {
+  isLoading = state;
+  controls.style.opacity = state ? 0.5 : 1;
+  controls.style.pointerEvents = state ? 'none' : 'all';
+  
+  if (state) {
+    tbody.innerHTML = '<tr><td colspan="3" class="loading">Cargando ejercicios...</td></tr>';
+  }
+}
+
+// Mostrar mensaje de error
+function showError(message) {
+  tbody.innerHTML = `<tr><td colspan="3" class="error">${message}</td></tr>`;
+}
 
 // Obtener datos del backend
 async function fetchEjercicios() {
+  setLoading(true);
   try {
-    const res = await fetch('ejercicios.json');
+    const res = await fetch('/ejercicios');
+    if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
     ejercicios = await res.json();
-    poblarZonaSelect();
-    renderTable();
+    if (ejercicios.length === 0) {
+      showError('No se encontraron ejercicios.');
+    } else {
+      poblarZonaSelect();
+      renderTable();
+    }
   } catch (err) {
     console.error('Error al obtener ejercicios:', err);
+    showError('Error al cargar los ejercicios. Por favor, recarga la página.');
+  } finally {
+    setLoading(false);
   }
 }
 
@@ -58,9 +85,28 @@ function renderTable() {
   });
 }
 
+// Función para manejar búsquedas con debounce
+let searchTimeout;
+function handleSearch() {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(renderTable, 300);
+}
+
 // Eventos
-afterEvent(searchInput, 'input', renderTable);
-afterEvent(zonaSelect, 'change', renderTable);
+searchInput.addEventListener('input', handleSearch);
+zonaSelect.addEventListener('change', renderTable);
+
+// Recargar datos cada 5 minutos (opcional)
+setInterval(() => {
+  fetch('/reload')
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === 'success') {
+        console.log(`Datos recargados: ${data.count} ejercicios`);
+      }
+    })
+    .catch(console.error);
+}, 5 * 60 * 1000);
 
 // Helper para compatibilidad (IE no soportado pero por si acaso)
 function afterEvent(element, event, handler) {
