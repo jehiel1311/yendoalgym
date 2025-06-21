@@ -1,27 +1,867 @@
 [
   {
-    "nombre": "Press de Banca",
-    "zona": "Pectoral",
-    "musculos_secundarios": ["Tríceps", "Deltoides anterior"]
-  },
-  {
-    "nombre": "Sentadilla",
-    "zona": "Piernas",
-    "musculos_secundarios": ["Glúteos", "Espalda baja"]
-  },
-  {
+    "id": "EX0001",
     "nombre": "Dominadas",
+    "nombre (en)": "Pull-ups",
     "zona": "Espalda",
-    "musculos_secundarios": ["Bíceps", "Antebrazo"]
+    "musculos_secundarios": [
+      "Dorsales",
+      "Bíceps",
+      "Trapecio",
+      "Romboides",
+      "Deltoides posterior",
+      "Antebrazos"
+    ],
+    "descripcion": "Ejercicio en el que te cuelgas de una barra y elevas el cuerpo hasta que la barbilla supera la barra, trabajando la musculatura de la espalda y los brazos",
+    "imagen": "img/EX0001.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Avanzado"
   },
   {
-    "nombre": "Curl de Bíceps",
-    "zona": "Brazos",
-    "musculos_secundarios": ["Antebrazo"]
+    "id": "EX0002",
+    "nombre": "Biceps con agarre supino",
+    "nombre (en)": "Supinated Grip Barbell Curl",
+    "zona": "Bíceps",
+    "musculos_secundarios": [
+      "Antebrazos"
+    ],
+    "descripcion": "De pie, pies al ancho de caderas y core firme. Tome la barra o mancuerna con agarre supino, mantenga los codos pegados al torso, flexione hasta contraer el bíceps sin balancear el cuerpo y baje en 2‑3 s.",
+    "imagen": "img/EX0002.png",
+    "tips": "Fijá los codos al costado del torso; subí sin balanceos para aislar el bíceps.",
+    "nivel": "Intermedio"
   },
   {
-    "nombre": "Plancha",
-    "zona": "Core",
-    "musculos_secundarios": ["Abdominales", "Espalda baja"]
+    "id": "EX0003",
+    "nombre": "Dominada Horizontal",
+    "nombre (en)": "Inverted Row",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Agarre la barra con las manos algo más abiertas que los hombros, retraiga las escápulas y active dorsales. Suba hasta que el mentón supere la barra manteniendo el tronco firme; descienda en control hasta la extensión completa de codos sin perder la tensión.",
+    "imagen": "img/EX0003.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Avanzado"
+  },
+  {
+    "id": "EX0004",
+    "nombre": "Dominada Bombero",
+    "nombre (en)": "Mixed Grip Pull-Up",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Agarre la barra con las manos algo más abiertas que los hombros, retraiga las escápulas y active dorsales. Suba hasta que el mentón supere la barra manteniendo el tronco firme; descienda en control hasta la extensión completa de codos sin perder la tensión.",
+    "imagen": "img/EX0004.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Avanzado"
+  },
+  {
+    "id": "EX0005",
+    "nombre": "Dominadas Negativas",
+    "nombre (en)": "Negative Pull-ups",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Agarre la barra con las manos algo más abiertas que los hombros, retraiga las escápulas y active dorsales. Suba hasta que el mentón supere la barra manteniendo el tronco firme; descienda en control hasta la extensión completa de codos sin perder la tensión.",
+    "imagen": "img/EX0005.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Avanzado"
+  },
+  {
+    "id": "EX0006",
+    "nombre": "Dominadas con Lastre",
+    "nombre (en)": "Weighted Pull-ups",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Agarre la barra con las manos algo más abiertas que los hombros, retraiga las escápulas y active dorsales. Suba hasta que el mentón supere la barra manteniendo el tronco firme; descienda en control hasta la extensión completa de codos sin perder la tensión.",
+    "imagen": "img/EX0006.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Avanzado"
+  },
+  {
+    "id": "EX0007",
+    "nombre": "Dominada con Manos Juntas",
+    "nombre (en)": "Close-Grip Pull-up",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Agarre la barra con las manos algo más abiertas que los hombros, retraiga las escápulas y active dorsales. Suba hasta que el mentón supere la barra manteniendo el tronco firme; descienda en control hasta la extensión completa de codos sin perder la tensión.",
+    "imagen": "img/EX0007.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Avanzado"
+  },
+  {
+    "id": "EX0008",
+    "nombre": "Dominada Comando",
+    "nombre (en)": "Commando Pull-up",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Agarre la barra con las manos algo más abiertas que los hombros, retraiga las escápulas y active dorsales. Suba hasta que el mentón supere la barra manteniendo el tronco firme; descienda en control hasta la extensión completa de codos sin perder la tensión.",
+    "imagen": "img/EX0008.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Avanzado"
+  },
+  {
+    "id": "EX0009",
+    "nombre": "Press de Banca para Tríceps con Mancuernas",
+    "nombre (en)": "Dumbbell Close-Grip Bench Press",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior",
+      "Serrato anterior"
+    ],
+    "descripcion": "Escápulas retraídas y pecho alto. Barra/líneas a la altura del esternón, codos 45°. Empuje hasta casi bloquear codos y vuelva controlado. Mantenga glúteos y pies firmes para estabilidad.",
+    "imagen": "img/EX0009.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0010",
+    "nombre": "Press de Banca",
+    "nombre (en)": "Bench Press",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Escápulas retraídas y pecho alto. Barra/líneas a la altura del esternón, codos 45°. Empuje hasta casi bloquear codos y vuelva controlado. Mantenga glúteos y pies firmes para estabilidad.",
+    "imagen": "img/EX0010.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0011",
+    "nombre": "Flexiones ",
+    "nombre (en)": "Push-ups",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0011.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0012",
+    "nombre": "Flexiones Diamante",
+    "nombre (en)": "Diamond Push-ups",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0012.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0013",
+    "nombre": "Flexiones Verticales",
+    "nombre (en)": "Handstand Push-ups",
+    "zona": "Hombros",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0013.png",
+    "tips": "Elevá desde el deltoides, codos levemente flexionados y control total en la fase excéntrica.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0014",
+    "nombre": "Pullover",
+    "nombre (en)": "Dumbbell Pullover",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Dorsales",
+      "Serrato anterior",
+      "Tríceps"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0014.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0015",
+    "nombre": "Aperturas con Mancuernas",
+    "nombre (en)": "Dumbbell Flyes",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Deltoides anterior",
+      "Serrato anterior"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0015.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0016",
+    "nombre": "Máquina Pectoral Contractor",
+    "nombre (en)": "Pec Deck Machine",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0016.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Principiante"
+  },
+  {
+    "id": "EX0017",
+    "nombre": "Máquina Press Sentado",
+    "nombre (en)": "Seated Chest Press Machine",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Escápulas retraídas y pecho alto. Barra/líneas a la altura del esternón, codos 45°. Empuje hasta casi bloquear codos y vuelva controlado. Mantenga glúteos y pies firmes para estabilidad.",
+    "imagen": "img/EX0017.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0018",
+    "nombre": "Curl con Barra",
+    "nombre (en)": "Barbell Curl",
+    "zona": "Bíceps",
+    "musculos_secundarios": [
+      "Antebrazos",
+      "Deltoides anterior"
+    ],
+    "descripcion": "De pie, pies al ancho de caderas y core firme. Tome la barra o mancuerna con agarre supino, mantenga los codos pegados al torso, flexione hasta contraer el bíceps sin balancear el cuerpo y baje en 2‑3 s.",
+    "imagen": "img/EX0018.png",
+    "tips": "Fijá los codos al costado del torso; subí sin balanceos para aislar el bíceps.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0019",
+    "nombre": "Fondos de Tríceps",
+    "nombre (en)": "Dips",
+    "zona": "Tríceps",
+    "musculos_secundarios": [
+      "Deltoides anterior",
+      "Pecho"
+    ],
+    "descripcion": "Barra paralela o anillas: brazos extendidos, hombros abajo. Flexione codos y hombros hasta 90° o ligeramente más profundo, mantenga el torso levemente inclinado. Extienda codos para volver arriba sin bloquear.",
+    "imagen": "img/EX0019.png",
+    "tips": "Sostené los codos fijos y extendé completamente el brazo, controlando la vuelta sin bloquear.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0020",
+    "nombre": "Fondos en Paralelas",
+    "nombre (en)": "Dips",
+    "zona": "Tríceps",
+    "musculos_secundarios": [
+      "Deltoides anterior",
+      "Pecho"
+    ],
+    "descripcion": "Barra paralela o anillas: brazos extendidos, hombros abajo. Flexione codos y hombros hasta 90° o ligeramente más profundo, mantenga el torso levemente inclinado. Extienda codos para volver arriba sin bloquear.",
+    "imagen": "img/EX0020.png",
+    "tips": "Sostené los codos fijos y extendé completamente el brazo, controlando la vuelta sin bloquear.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0021",
+    "nombre": "Jalones con Polea para Tríceps",
+    "nombre (en)": "Cable Triceps Pushdown",
+    "zona": "Tríceps",
+    "musculos_secundarios": [
+      "Antebrazos"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0021.png",
+    "tips": "Sostené los codos fijos y extendé completamente el brazo, controlando la vuelta sin bloquear.",
+    "nivel": "Principiante"
+  },
+  {
+    "id": "EX0022",
+    "nombre": "Patada de Tríceps",
+    "nombre (en)": "Triceps Kickback",
+    "zona": "Tríceps",
+    "musculos_secundarios": [
+      "Antebrazos"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0022.png",
+    "tips": "Sostené los codos fijos y extendé completamente el brazo, controlando la vuelta sin bloquear.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0023",
+    "nombre": "Press de Banca con Agarre Cerrado",
+    "nombre (en)": "Close-Grip Bench Press",
+    "zona": "Tríceps",
+    "musculos_secundarios": [
+      "Deltoides anterior"
+    ],
+    "descripcion": "Escápulas retraídas y pecho alto. Barra/líneas a la altura del esternón, codos 45°. Empuje hasta casi bloquear codos y vuelva controlado. Mantenga glúteos y pies firmes para estabilidad.",
+    "imagen": "img/EX0023.png",
+    "tips": "Sostené los codos fijos y extendé completamente el brazo, controlando la vuelta sin bloquear.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0024",
+    "nombre": "Press Frances",
+    "nombre (en)": "Skull Crushers",
+    "zona": "Tríceps",
+    "musculos_secundarios": [
+      "Deltoides anterior"
+    ],
+    "descripcion": "Escápulas retraídas y pecho alto. Barra/líneas a la altura del esternón, codos 45°. Empuje hasta casi bloquear codos y vuelva controlado. Mantenga glúteos y pies firmes para estabilidad.",
+    "imagen": "img/EX0024.png",
+    "tips": "Sostené los codos fijos y extendé completamente el brazo, controlando la vuelta sin bloquear.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0025",
+    "nombre": "Extensiones de Tríceps con Dos Manos",
+    "nombre (en)": "Overhead Dumbbell Triceps Extension",
+    "zona": "Tríceps",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0025.png",
+    "tips": "Sostené los codos fijos y extendé completamente el brazo, controlando la vuelta sin bloquear.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0026",
+    "nombre": "Curl Martillo",
+    "nombre (en)": "Hammer Curl",
+    "zona": "Bíceps",
+    "musculos_secundarios": [
+      "Antebrazos",
+      "Deltoides anterior"
+    ],
+    "descripcion": "De pie, pies al ancho de caderas y core firme. Tome la barra o mancuerna con agarre supino, mantenga los codos pegados al torso, flexione hasta contraer el bíceps sin balancear el cuerpo y baje en 2‑3 s.",
+    "imagen": "img/EX0026.png",
+    "tips": "Fijá los codos al costado del torso; subí sin balanceos para aislar el bíceps.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0027",
+    "nombre": "Curl Concentrado Apoyados en el Muslo",
+    "nombre (en)": "Concentration Curl",
+    "zona": "Bíceps",
+    "musculos_secundarios": [
+      "Antebrazos",
+      "Deltoides anterior"
+    ],
+    "descripcion": "De pie, pies al ancho de caderas y core firme. Tome la barra o mancuerna con agarre supino, mantenga los codos pegados al torso, flexione hasta contraer el bíceps sin balancear el cuerpo y baje en 2‑3 s.",
+    "imagen": "img/EX0027.png",
+    "tips": "Fijá los codos al costado del torso; subí sin balanceos para aislar el bíceps.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0028",
+    "nombre": "Curl Concentrado en Banco Scott",
+    "nombre (en)": "Curl Scott",
+    "zona": "Bíceps",
+    "musculos_secundarios": [
+      "Antebrazos",
+      "Deltoides anterior"
+    ],
+    "descripcion": "De pie, pies al ancho de caderas y core firme. Tome la barra o mancuerna con agarre supino, mantenga los codos pegados al torso, flexione hasta contraer el bíceps sin balancear el cuerpo y baje en 2‑3 s.",
+    "imagen": "img/EX0028.png",
+    "tips": "Fijá los codos al costado del torso; subí sin balanceos para aislar el bíceps.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0029",
+    "nombre": "Curl de Bíceps con Polea",
+    "nombre (en)": "Cable Biceps Curl",
+    "zona": "Bíceps",
+    "musculos_secundarios": [
+      "Antebrazos",
+      "Deltoides anterior"
+    ],
+    "descripcion": "De pie, pies al ancho de caderas y core firme. Tome la barra o mancuerna con agarre supino, mantenga los codos pegados al torso, flexione hasta contraer el bíceps sin balancear el cuerpo y baje en 2‑3 s.",
+    "imagen": "img/EX0029.png",
+    "tips": "Fijá los codos al costado del torso; subí sin balanceos para aislar el bíceps.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0030",
+    "nombre": "Press Militar",
+    "nombre (en)": "Military Press",
+    "zona": "Hombros",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Escápulas retraídas y pecho alto. Barra/líneas a la altura del esternón, codos 45°. Empuje hasta casi bloquear codos y vuelva controlado. Mantenga glúteos y pies firmes para estabilidad.",
+    "imagen": "img/EX0030.png",
+    "tips": "Elevá desde el deltoides, codos levemente flexionados y control total en la fase excéntrica.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0031",
+    "nombre": "Press Arnold",
+    "nombre (en)": "Arnold Press",
+    "zona": "Hombros",
+    "musculos_secundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "descripcion": "Escápulas retraídas y pecho alto. Barra/líneas a la altura del esternón, codos 45°. Empuje hasta casi bloquear codos y vuelva controlado. Mantenga glúteos y pies firmes para estabilidad.",
+    "imagen": "img/EX0031.png",
+    "tips": "Elevá desde el deltoides, codos levemente flexionados y control total en la fase excéntrica.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0032",
+    "nombre": "Elevaciones Frontales",
+    "nombre (en)": "Front Raises",
+    "zona": "Hombros",
+    "musculos_secundarios": [
+      "Trapecio",
+      "Tríceps"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0032.png",
+    "tips": "Elevá desde el deltoides, codos levemente flexionados y control total en la fase excéntrica.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0033",
+    "nombre": "Aperturas con Mancuernas Boca Abajo",
+    "nombre (en)": "Prone Reverse Dumbbell Flyes",
+    "zona": "Hombros",
+    "musculos_secundarios": [
+      "Deltoides anterior",
+      "Serrato anterior"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0033.png",
+    "tips": "Elevá desde el deltoides, codos levemente flexionados y control total en la fase excéntrica.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0034",
+    "nombre": "Elevaciones Laterales",
+    "nombre (en)": "Lateral Raises",
+    "zona": "Hombros",
+    "musculos_secundarios": [
+      "Trapecio",
+      "Tríceps"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0034.png",
+    "tips": "Elevá desde el deltoides, codos levemente flexionados y control total en la fase excéntrica.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0035",
+    "nombre": "Sentadilla",
+    "nombre (en)": "Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0035.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0036",
+    "nombre": "Sentadilla Búlgara",
+    "nombre (en)": "Bulgarian Split Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0036.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0037",
+    "nombre": "Sentadilla a una Pierna con Ayuda",
+    "nombre (en)": "Assisted Pistol Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0037.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0038",
+    "nombre": "Prensa",
+    "nombre (en)": "Leg Press",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0038.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Principiante"
+  },
+  {
+    "id": "EX0039",
+    "nombre": "Curl Femoral",
+    "nombre (en)": "Leg Curl",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales"
+    ],
+    "descripcion": "De pie, pies al ancho de caderas y core firme. Tome la barra o mancuerna con agarre supino, mantenga los codos pegados al torso, flexione hasta contraer el bíceps sin balancear el cuerpo y baje en 2‑3 s.",
+    "imagen": "img/EX0039.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0040",
+    "nombre": "Extension Cuádriceps",
+    "nombre (en)": "Leg Extension",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0040.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0041",
+    "nombre": "Sentadilla a una Pierna",
+    "nombre (en)": "Pistol Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0041.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0042",
+    "nombre": "Sentadillas con Salto",
+    "nombre (en)": "Jump Squats",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Pantorrillas",
+      "Glúteos",
+      "Isquiotibiales"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0042.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0043",
+    "nombre": "Sentadilla Sumo",
+    "nombre (en)": "Sumo Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Aductores",
+      "Isquiotibiales"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0043.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0044",
+    "nombre": "Sentadillas con Barra",
+    "nombre (en)": "Barbell Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0044.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0045",
+    "nombre": "Sentadilla Frontal",
+    "nombre (en)": "Front Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Cuádriceps",
+      "Glúteos",
+      "Core"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0045.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0046",
+    "nombre": "Sentadilla Hack",
+    "nombre (en)": "Hack Squat",
+    "zona": "Piernas",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Pies a la anchura de hombros, puntas ligeramente abiertas. Descienda flexionando caderas y rodillas manteniendo la espalda neutra hasta que las caderas queden bajo las rodillas; impulse a través de talones, active glúteos y core.",
+    "imagen": "img/EX0046.png",
+    "tips": "Mantené la espalda neutra y distribuí el peso en talones, evitando que las rodillas colapsen.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0047",
+    "nombre": "Hiperextensiones Espalda",
+    "nombre (en)": "Back Extensions",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0047.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0048",
+    "nombre": "Aperturas en Polea",
+    "nombre (en)": "Cable Flyes",
+    "zona": "Pecho",
+    "musculos_secundarios": [
+      "Deltoides anterior",
+      "Serrato anterior"
+    ],
+    "descripcion": "Mantén postura neutra, controla el rango completo y respira de forma constante durante todo el movimiento.",
+    "imagen": "img/EX0048.png",
+    "tips": "Retractá las escápulas y controlá la carga para bajar hasta el centro del pecho.",
+    "nivel": "Principiante"
+  },
+  {
+    "id": "EX0049",
+    "nombre": "Jalón al pecho",
+    "nombre (en)": "Lat Pulldown",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Dorsales",
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Sentado en una máquina, tiras de una barra hacia el pecho desde una posición elevada, enfocándote en el músculo dorsal ancho.",
+    "imagen": "img/EX0049.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0050",
+    "nombre": "Remo con barra",
+    "nombre (en)": "Barbell Row",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Inclinado hacia adelante, sostienes una barra y la llevas hacia el abdomen, trabajando la parte media de la espalda",
+    "imagen": "img/EX0050.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0051",
+    "nombre": "Remo con mancuerna",
+    "nombre (en)": "Dumbbell Row",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Apoyando una rodilla y una mano en un banco, jalas una mancuerna hacia el torso, enfocándote en los músculos de la espalda.",
+    "imagen": "img/EX0051.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0052",
+    "nombre": "Peso muerto",
+    "nombre (en)": "Deadlift",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Erectores espinales",
+      "Trapecio"
+    ],
+    "descripcion": "Levantamiento de una barra desde el suelo hasta la posición erguida, trabajando la espalda baja, glúteos y piernas",
+    "imagen": "img/EX0052.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0053",
+    "nombre": "Remo en máquina",
+    "nombre (en)": "Machine Row",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Sentado en una máquina específica, tiras de las asas hacia el torso, trabajando la espalda de manera controlada",
+    "imagen": "img/EX0053.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0054",
+    "nombre": "Pullover con mancuerna",
+    "nombre (en)": "Dumbbell Pullover",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Dorsales",
+      "Serrato anterior",
+      "Tríceps"
+    ],
+    "descripcion": "Acostado en un banco, sostienes una mancuerna y la llevas desde detrás de la cabeza hasta sobre el pecho, trabajando el dorsal ancho y el pecho.",
+    "imagen": "img/EX0054.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0055",
+    "nombre": "Remo invertido",
+    "nombre (en)": "Inverted Row",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Bíceps",
+      "Antebrazos",
+      "Deltoides posterior",
+      "Trapecio",
+      "Romboides"
+    ],
+    "descripcion": "Suspendido bajo una barra baja, jalas el pecho hacia la barra manteniendo el cuerpo recto, trabajando la espalda y los brazos",
+    "imagen": "img/EX0055.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0056",
+    "nombre": "Encogimientos de hombros",
+    "nombre (en)": "Shrugs",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Trapecio",
+      "Deltoides"
+    ],
+    "descripcion": "De pie, sostienes pesas y elevas los hombros hacia las orejas, enfocándote en el trapecio.​",
+    "imagen": "img/EX0056.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0057",
+    "nombre": "Superman",
+    "nombre (en)": "Superman",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Acostado boca abajo, elevas simultáneamente brazos y piernas del suelo, fortaleciendo la espalda baja",
+    "imagen": "img/EX0057.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
+  },
+  {
+    "id": "EX0058",
+    "nombre": "Superman",
+    "nombre (en)": "Superman",
+    "zona": "Espalda",
+    "musculos_secundarios": [
+      "Glúteos",
+      "Isquiotibiales",
+      "Core"
+    ],
+    "descripcion": "Acostado boca abajo, elevas simultáneamente brazos y piernas del suelo, fortaleciendo la espalda baja",
+    "imagen": "img/EX0058.png",
+    "tips": "Iniciá el tirón con los dorsales, manteniendo el core firme y evitando balancear el cuerpo.",
+    "nivel": "Intermedio"
   }
 ]

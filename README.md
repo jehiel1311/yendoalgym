@@ -17,13 +17,13 @@ Aplicación web para buscar y filtrar ejercicios de gimnasio por nombre y zona m
 buscador-ejercicios/
 ├── app.py               # Aplicación Flask (backend)
 ├── generate_json.py     # Script para generar el JSON desde Excel
-├── data/               
-│   └── ejercicios.json  # Datos de los ejercicios (generado)
-├── static/             # Archivos estáticos
-│   ├── index.html      # Página principal
-│   ├── styles.css      # Estilos CSS
-│   ├── main.js         # Lógica del frontend
-│   └── ejercicios.json # Datos para el frontend
+├── data/                # Archivo Excel de origen
+│   └── Ejercicios-base.xlsx
+├── static/              # Archivos estáticos y JSON generado
+│   ├── index.html
+│   ├── styles.css
+│   ├── main.js
+│   └── ejercicios.json
 ├── requirements.txt     # Dependencias de Python
 └── README.md           # Este archivo
 ```
@@ -52,9 +52,10 @@ buscador-ejercicios/
    pip install -r requirements.txt
    ```
 
-4. **Generar datos de ejemplo (opcional)**:
+4. **Generar los datos desde el Excel**:
    ```bash
-   # Coloca tu archivo Ejercicios-base.xlsx en la raíz del proyecto
+   # El archivo `data/Ejercicios-base.xlsx` ya incluye ejercicios de ejemplo
+   # Ejecuta el script para crear `static/ejercicios.json`
    python generate_json.py
    ```
 
@@ -79,7 +80,7 @@ buscador-ejercicios/
 ## 📝 Notas
 
 - Los datos se cargan desde `static/ejercicios.json`
-- Para actualizar los datos, modifica el archivo Excel y ejecuta `generate_json.py`
+- Para actualizar los datos, edita `data/Ejercicios-base.xlsx` y ejecuta `generate_json.py`
 - La aplicación incluye manejo de errores para casos como archivos faltantes o errores de red
 
 ## 📄 Licencia
