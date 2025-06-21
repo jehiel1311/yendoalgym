@@ -84,6 +84,7 @@ buscador-ejercicios/
 - Los datos se cargan desde `static/ejercicios.json`
 - Para actualizar los datos, edita `data/Ejercicios-base.xlsx` y ejecuta `generate_json.py`
 - La aplicación incluye manejo de errores para casos como archivos faltantes o errores de red
+- Si abres `static/index.html` directamente desde el explorador de archivos verás una página vacía. Esto ocurre porque el navegador bloquea la llamada `fetch()` por razones de seguridad. Ejecuta `python app.py` (o `python -m http.server`) y accede a [http://localhost:5000](http://localhost:5000).
 
 ## 📄 Licencia
 
