@@ -38,7 +38,7 @@ async function fetchEjercicios() {
     }
   } catch (err) {
     console.error('Error al obtener ejercicios:', err);
-    showError('Error al cargar los ejercicios. Por favor, recarga la página.');
+    showError('Error al cargar los ejercicios. Asegúrate de ejecutar `python app.py` o un servidor local y que el archivo `static/ejercicios.json` esté presente.');
   } finally {
     setLoading(false);
   }
