@@ -7,7 +7,8 @@ app = Flask(__name__, static_folder='static', static_url_path='')
 
 # Configuración
 DATA_FILE = Path(__file__).parent / 'static' / 'ejercicios.json'
-ALLOWED_FILES = {'index.html', 'main.js', 'styles.css'}
+# Extensiones y directorios permitidos para archivos estáticos
+ALLOWED_EXTENSIONS = {'.html', '.js', '.css', '.json'}
 ALLOWED_DIRS = {'img'}
 
 # Cargar datos al inicio
@@ -47,9 +48,9 @@ def index():
 @app.route('/<path:filename>')
 def serve_static(filename):
     """Sirve archivos estáticos permitidos."""
-    # Permitir archivos explícitos o cualquier archivo dentro de los directorios permitidos
     dir_allowed = any(filename.startswith(f"{d}/") for d in ALLOWED_DIRS)
-    if filename not in ALLOWED_FILES and not filename.startswith('ejercicios.json') and not dir_allowed:
+    ext_allowed = any(filename.endswith(ext) for ext in ALLOWED_EXTENSIONS)
+    if not ext_allowed and not dir_allowed:
         abort(403, description="Acceso denegado")
     return send_from_directory(app.static_folder, filename)
 
