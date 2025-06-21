@@ -8,7 +8,7 @@ let ejercicios = [];
 // Obtener datos del backend
 async function fetchEjercicios() {
   try {
-    const res = await fetch('ejercicios.json');
+    const res = await fetch('/ejercicios');
     ejercicios = await res.json();
     poblarZonaSelect();
     renderTable();
