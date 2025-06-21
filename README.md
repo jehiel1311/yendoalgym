@@ -7,9 +7,11 @@ Aplicación web para buscar y filtrar ejercicios de gimnasio por nombre y zona m
 - Búsqueda en tiempo real por nombre de ejercicio
 - Filtrado por zona muscular principal
 - Interfaz limpia y responsiva
+- Tema en modo noche por defecto
 - Carga dinámica de datos
 - Actualización automática de datos cada 5 minutos
 - Manejo de errores mejorado
+- Páginas de inicio de sesión y registro básicas
 
 ## 🗂️ Estructura del Proyecto
 
